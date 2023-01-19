@@ -52,7 +52,7 @@ const submitOrder = async () => {
     window.location.href = '/finish';
   }else{
     console.log("注文に失敗しました");
-    setError("注文に失敗しました<hr>もう一度お試しください。");
+    setError("注文に失敗しました。もう一度お試しください。");
   }
 }
 
