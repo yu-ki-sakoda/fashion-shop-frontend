@@ -5,11 +5,10 @@
  https://fashionshop-frontend.vercel.app/
  
  ## テスト用アカウント
- 
-ユーザーネーム：test
-メールアドレス：test@gmail.com 
+ ユーザーネーム：test
+メールアドレス：test@gmail.com  
 パスワード：testpass  
-※デモアプリのため上記でサインアップ、ログインを行ってください。
+※デモアプリのため、アカウントの追加はお控えください。
 
 
 ## 使用技術
