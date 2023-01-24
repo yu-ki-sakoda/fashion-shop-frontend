@@ -179,7 +179,7 @@ const Cart = () => {
                 </div>
               </Badge>
 
-              <div> 
+              <div className="order"> 
                   <Button style={{width:"100%"}}>
                     <a href="/check">注文確定</a>
                   </Button>

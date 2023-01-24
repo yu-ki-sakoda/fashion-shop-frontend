@@ -58,7 +58,7 @@ const Fashions = (props) => {
 
 
 
-      <Row>
+      <Row style={{justifyContent:"center"}}>
       
         {fashion.items.map((fas) => (
        <Col xs="6" sm="3" style={{padding:"0",}} key={fas.id}>
@@ -66,16 +66,16 @@ const Fashions = (props) => {
       <Card style={{margin:"0 5px 20px 5px",padding:"15px 15px 15px 15px"}}>
       <CardImg src={`${process.env.NEXT_PUBLIC_API_URL}${fas.image.url}`} top={true} style={{height:"auto",width:"auto",}} />
       <div className="title">
-      <CardTitle style={{margin:"5px auto",fontSize:"16px", paddingTop:"5px"}}>item：{fas.name}</CardTitle>
-      <CardTitle style={{margin:"5px auto",fontSize:"16px", paddingTop:"5px"}}>brand：{fas.brand}</CardTitle>
-      <CardTitle style={{margin:"5px auto",fontSize:"16px", paddingTop:"5px"}}>price：￥{fas.price}</CardTitle>
+      <CardTitle style={{margin:"0px auto",fontSize:"16px", paddingTop:"5px"}}>item：{fas.name}</CardTitle>
+      <CardTitle style={{margin:"0px auto",fontSize:"16px", paddingTop:"5px"}}>brand：{fas.brand}</CardTitle>
+      <CardTitle style={{margin:"0px auto",fontSize:"16px", paddingTop:"5px"}}>price：￥{fas.price}</CardTitle>
       </div>
       <div className="btn">
-        {user ? (<Button outline style={{width:"100%",margin:"20px auto 0 auto",}} 
+        {user ? (<Button outline style={{width:"100%",margin:"10px auto 0 auto",}} 
          onClick={() => appContext.addItem(fas)}>
         カートに入れる
         </Button>) : (
-        <Button outline style={{width:"100%",margin:"20px auto 0 auto",}}>
+        <Button outline style={{width:"100%",margin:"10px auto 0 auto",}}>
         <a href="/login">
         カートに入れる
         </a>

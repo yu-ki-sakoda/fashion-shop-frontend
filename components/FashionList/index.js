@@ -31,7 +31,7 @@ const FashionList = (props) => {
     const searchQuery = data.fashions.filter((fashion) => fashion.name.toLowerCase().includes(props.search))
 
     return (
-      <Row>
+      <Row style={{justifyContent:"center"}}>
         {searchQuery.map((fas) => (
 
        <Col xs="6" sm="3" style={{marginTop:"40px",padding:"0",}} key={fas.id}>
