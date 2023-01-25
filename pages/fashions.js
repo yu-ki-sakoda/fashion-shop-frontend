@@ -56,8 +56,6 @@ const Fashions = (props) => {
 
       <h1 style={{margin:"30px 0"}}>{fashion.name}</h1>
 
-
-
       <Row style={{justifyContent:"center"}}>
       
         {fashion.items.map((fas) => (
