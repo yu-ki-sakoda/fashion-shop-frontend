@@ -15,7 +15,7 @@ const Cart = () => {
   {isWide ? 
   
   ( <div className="max">
-      <Card xs="6">
+      <Card style={{margin:"0 auto", width:"300px"}}>
         <CardTitle style={{margin:"auto",padding:"15px 0",fontWeight:"600", fontSize:"25"}}>Shopping Cart</CardTitle>
         <hr style={{margin:"0"}}/>
         <CardBody style={{padding:"15px"}}>
