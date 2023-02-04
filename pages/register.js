@@ -4,9 +4,6 @@ import AppContext from "../context/AppContext";
 import { registerUser } from "../lib/auth";
 
 
-
-
-
 const register = () => {
 
   const appContext = useContext(AppContext);
@@ -53,7 +50,7 @@ const register = () => {
               </span>
             </fieldset>
 
-            <Button style={{float:"right", width:"120px"}} onClick={() => {handleRegister();}}>Sign Up</Button>
+            <Button style={{float:"right", width:"120px",display:"inline-block",marginTop:"10px"}} onClick={() => {handleRegister();}}>Sign Up</Button>
           </Form>
 
         </section>

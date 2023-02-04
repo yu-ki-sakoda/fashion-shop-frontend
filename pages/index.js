@@ -12,7 +12,8 @@ const index = () => {
     <div className="container-fluid">
       <Row>
         <Col>
-        {isWide ? (<div className="search">
+        {isWide ? (
+        <div className="search">
         <InputGroup>
         <InputGroupText>探す</InputGroupText>
         <Input placeholder="何をお探しですか？" onChange={(e) => setQuery(e.target.value.toLocaleLowerCase())}/>
@@ -33,12 +34,14 @@ const index = () => {
       <style jsx>
         {`
         .search{
-          margin:20px;
+          margin-top:40px;
+          margin-bottom:20px;
           width:500px;
         }
         
         .search2{
-          margin-top:20px;
+          margin-top:40px;
+          margin-bottom:20px;
         }
 
         .container{

@@ -1,15 +1,14 @@
-import React, { useContext, useEffect } from "react";
-import App from "next/app"
+import React, { useContext } from "react";
 import Head from "next/head"
-import {Nav, NavItem,Container, Button} from "reactstrap"
+import {Nav, NavItem,Container} from "reactstrap"
 import Link from "next/link"
 import AppContext from "../context/AppContext";
 import useMedia from "use-media";
-import Cookies from "js-cookie";
+
 
 const Layout = (props) => {
 
-  const {user,setUser,userOut} = useContext(AppContext);
+  const {user,userOut} = useContext(AppContext);
 
   const isWide = useMedia({minWidth:"600px"}); 
 
@@ -63,13 +62,15 @@ const Layout = (props) => {
           font-size:16px;
         }
 
+
         `}
       </style>
-     <Nav className="navbar navbar-dark bg-dark">
-      
+
+     <Nav className="navbar navbar-dark bg-dark">    
       <>
 
-      {isWide ? (
+      {isWide ? 
+      (
       <div className="max">
   
       <NavItem>
@@ -83,9 +84,11 @@ const Layout = (props) => {
       <NavItem>
         {user ? (<h5>{user.username}</h5>) : ( <Link href="/register"><a className="nav-link">登録</a></Link>)}
       </NavItem>
-      </div>) 
+      </div>
+      ) 
       : 
-      (<div className="min">
+      (
+      <div className="min">
         <NavItem>
          <Link href="/"><a className="navbar-brand top-name">Fashion Online Shop</a></Link>
         </NavItem>
@@ -94,15 +97,36 @@ const Layout = (props) => {
       </NavItem >
       <NavItem>
         {user ? (<h5 className="nav-links">{user.username}</h5>) : ( <Link href="/register"><a className="nav-links">登録</a></Link>)}
-      </NavItem></div>)}
+      </NavItem>
+      </div>
+      )}
       
       </>
-    
-      
-
      </Nav>
+
      <Container>{props.children}</Container>
      </header>
+
+     <footer>
+     <Nav className="navbar navbar-dark bg-dark">
+     <NavItem>
+         <Link href="/"><a className="navbar-brand" >Fashion Online Shop</a></Link>
+      </NavItem>
+      </Nav>
+
+      <style jsx>
+        {`
+        footer{
+          position:fixed;
+          width:100%;
+          bottom:0;
+        }
+        footer a{
+          font-size:12px;
+        }
+        `}
+      </style>
+     </footer>
     </div>
     );
       }

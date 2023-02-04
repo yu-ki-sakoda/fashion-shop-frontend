@@ -1,10 +1,7 @@
 import { useContext, useState } from "react";
 import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from "reactstrap";
 import AppContext from "../context/AppContext";
-import { login, registerUser } from "../lib/auth";
-
-
-
+import { login } from "../lib/auth";
 
 
 const Login = () => {
@@ -55,7 +52,7 @@ const Login = () => {
               </span>
             </fieldset>
 
-            <Button style={{float:"right", width:"120px"}} onClick={() => {handleLogin();}}>Log In</Button>
+            <Button style={{float:"right", width:"120px",display:"inline-block",marginTop:"10px"}} onClick={() => {handleLogin();}}>Log In</Button>
           </Form>
 
         </section>

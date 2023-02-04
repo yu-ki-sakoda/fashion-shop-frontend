@@ -1,13 +1,12 @@
-import  Link  from "next/link";
 import { useContext } from "react";
-import { Badge, Button, Card, CardBody, CardTitle, Col } from "reactstrap";
+import { Badge, Button, Card, CardBody, CardTitle } from "reactstrap";
 import { useMedia } from "use-media";
 import AppContext from "../../context/AppContext";
 
 const Cart = () => {
 
   const appContext = useContext(AppContext);
-  const {user, cart} = appContext;
+  const {cart} = appContext;
   const isWide = useMedia({minWidth:"600px"});
 
   return (
@@ -20,9 +19,6 @@ const Cart = () => {
         <CardTitle style={{margin:"auto",padding:"15px 0",fontWeight:"600", fontSize:"25"}}>Shopping Cart</CardTitle>
         <hr style={{margin:"0"}}/>
         <CardBody style={{padding:"15px"}}>
-
-      
-     
 
           <div className="item">
             <small>item：</small>
@@ -54,9 +50,6 @@ const Cart = () => {
               }
             }) : null}
 
-
-          
-        
             <div>
 
               <Badge style={{width:"100%",padding:"10px",margin:"20px 0"}} color="light">
@@ -129,7 +122,7 @@ const Cart = () => {
   
   ( <div className="min">
 
-        <Card  style={{margin:"0 auto 30px", width:"300px"}}>
+        <Card  style={{margin:"0 auto", width:"300px"}}>
         <CardTitle style={{margin:"auto",padding:"15px 0",fontWeight:"600", fontSize:"25"}}>Shopping Cart</CardTitle>
         <hr style={{margin:"0"}}/>
         <CardBody style={{padding:"20px"}}>

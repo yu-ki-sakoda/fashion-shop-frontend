@@ -1,15 +1,11 @@
-import  Link  from "next/link";
-import { Button, Card, CardBody, CardImg, CardTitle, Col, Input, InputGroup, InputGroupText, Row } from "reactstrap";
+import { Button, Card, CardImg, CardTitle, Col, Row } from "reactstrap";
 import {gql} from "apollo-boost"
 import {useQuery} from "@apollo/react-hooks"
 import { useRouter } from "next/router";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Cart from "../components/Cart";
 import useMedia from "use-media";
 import AppContext from "../context/AppContext";
-import Login from "./login";
-
-
 
 const ItemQuery = gql`
  query ($id : ID!) {
@@ -43,7 +39,7 @@ const Fashions = (props) => {
 
   if(error) return "ページの読み込みに失敗しました";
 
-  if(loading) return <h1>ローディング....</h1>;
+  if(loading) return <h1 style={{marginTop:"120px",textAlign:"center",fontSize:"64px"}} >loading....</h1>;
   
   if(data){
     const { fashion } = data;
@@ -56,10 +52,10 @@ const Fashions = (props) => {
 
       <h1 style={{margin:"30px 0"}}>{fashion.name}</h1>
 
-      <Row style={{justifyContent:"center"}}>
+      <Row style={{justifyContent:"center",marginBottom:"80px"}}>
       
         {fashion.items.map((fas) => (
-       <Col xs="6" sm="3" style={{padding:"0",}} key={fas.id}>
+       <Col xs="6" sm="3" style={{padding:"0"}} key={fas.id}>
       
       <Card style={{margin:"0 5px 20px 5px",padding:"15px 15px 15px 15px"}}>
       <CardImg src={`${process.env.NEXT_PUBLIC_API_URL}${fas.image.url}`} top={true} style={{height:"auto",width:"auto",}} />
@@ -88,6 +84,7 @@ const Fashions = (props) => {
        
         <style jsx>
           {`
+
          .title{
           margin:15px auto 0 auto;
        
@@ -121,13 +118,17 @@ const Fashions = (props) => {
         </style>
         
         <>
-        {isWide ? (<div>
+        {isWide ? (
+        
+        <div>
         <Col xs="12" style={{padding:0}}>
         <div>
           <Cart />
         </div>
         </Col>
-        </div>) : (
+        </div>) 
+        : 
+        (
           
         <div className="cart">
           <Cart />
