@@ -66,7 +66,7 @@ const submitOrder = async () => {
       <FormGroup>
         <div>
           <Label>住所</Label>
-          <Input name="address" onChange={(e) => handleChange(e)}/>
+          <Input autocomplete="off" name="address" onChange={(e) => handleChange(e)}/>
         </div>
       </FormGroup>
 
@@ -153,7 +153,7 @@ const submitOrder = async () => {
       <FormGroup>
         <div>
           <Label>住所</Label>
-          <Input name="address" onChange={(e) => handleChange(e)}/>
+          <Input name="address" autocomplete="off" onChange={(e) => handleChange(e)}/>
         </div>
       </FormGroup>
 

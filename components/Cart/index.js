@@ -64,7 +64,7 @@ const Cart = () => {
                   <Button style={{width:"100%"}}>
                     <a href="/check">注文確定</a>
                   </Button>
-                
+    
               </div>
 
             </div>
@@ -105,7 +105,7 @@ const Cart = () => {
         .order a{
           color:white;
           text-decoration:none;
-          
+          padding:5px 90px;      
         }
 
         .order {
@@ -217,7 +217,7 @@ const Cart = () => {
         .order a{
           color:white;
           text-decoration:none;
-          
+          padding:5px 80px;
         }
 
         .order {

@@ -34,7 +34,7 @@ const Layout = (props) => {
         }
 
         .nav-links{
-          font-size:10px;
+          font-size:12px;
           padding:0;
           margin:0 5px 0 0;
         }
@@ -95,7 +95,7 @@ const Layout = (props) => {
         {user ? (<Link href="/"><a className="nav-links" onClick={() => {userOut();}}>ログアウト</a></Link>) : (<Link href="/login"><a className="nav-links">ログイン</a></Link>)}
       </NavItem >
       <NavItem>
-        {user ? (<h5 className="nav-links">{user.username}</h5>) : ( <Link href="/register"><a className="nav-links">登録</a></Link>)}
+        {user ? (<a className="nav-links" style={{color:"white"}}>ユーザー名&nbsp;:&nbsp;{user.username}</a>) : ( <Link href="/register"><a className="nav-links">登録</a></Link>)}
       </NavItem>
       </div>
       )}
