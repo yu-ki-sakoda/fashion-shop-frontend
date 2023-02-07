@@ -27,7 +27,7 @@ const register = () => {
           </div>
         </div>
         <section className="wrapper">
-          <Form>
+          <Form autocomplete="off">
             <fieldset>
               <FormGroup>
                 <Label>username：</Label>

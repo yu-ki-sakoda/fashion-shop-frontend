@@ -121,7 +121,7 @@ const Fashions = (props) => {
         {isWide ? (
         
         <div>
-        <Col xs="12" style={{padding:0}}>
+        <Col xs="12" style={{padding:"0",marginRight:"40px"}}>
         <div>
           <Cart />
         </div>
