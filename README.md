@@ -2,7 +2,13 @@
  
  ## URL
  
- https://fashionshop-frontend.vercel.app/
+ web-app<br>
+ https://fashionshop-frontend.vercel.app/<br>
+ github:frontend<br>
+ https://github.com/yu-ki-sakoda/fashion-shop-frontend<br>
+ github:backend<br>
+ https://github.com/yu-ki-sakoda/fashion-shop-backend<br>
+
  
  ## テスト用アカウント
  
